@@ -4321,6 +4321,19 @@ type 0309, grid 2.5 mm</description>
 <text x="-4.064" y="3.048" size="1.016" layer="95">&gt;NAME</text>
 <text x="-4.826" y="-4.572" size="1.016" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="DIODE_SHOTTKY">
+<wire x1="0" y1="0" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-0.635" y2="1.27" width="0.254" layer="94"/>
+<pin name="+" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="-" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-2.032" y="3.556" size="1.016" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-4.318" size="1.016" layer="96">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP_POL" uservalue="yes">
@@ -4404,6 +4417,22 @@ type 0309, grid 2.5 mm</description>
 <deviceset name="DIODE" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="DIODE" x="1.27" y="0"/>
+</gates>
+<devices>
+<device name="" package="DO-201AD_AXIAL">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIODE_SHOTTKY" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="DIODE_SHOTTKY" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="DO-201AD_AXIAL">
@@ -4794,6 +4823,7 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <part name="K2" library="Wurth_Wire_to_Board_Connectors_rev15d" deviceset="68800611622" device=""/>
 <part name="AUX_1" library="FVP" deviceset="CON-2" device="B2B-XH-A(LF)(SN)"/>
 <part name="CPU_SW" library="FVP" deviceset="CON-2" device="B2B-XH-A(LF)(SN)"/>
+<part name="D4" library="TinkerTech" deviceset="DIODE_SHOTTKY" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4902,8 +4932,8 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <instance part="AUX_2" gate="G$1" x="215.9" y="111.76" smashed="yes">
 <attribute name="NAME" x="215.9" y="118.11" size="1.778" layer="95"/>
 </instance>
-<instance part="X1" gate="-1" x="218.44" y="195.58"/>
-<instance part="X1" gate="-2" x="218.44" y="193.04"/>
+<instance part="X1" gate="-1" x="228.6" y="195.58"/>
+<instance part="X1" gate="-2" x="228.6" y="193.04"/>
 <instance part="P+3" gate="1" x="210.82" y="205.74"/>
 <instance part="GND4" gate="1" x="210.82" y="182.88"/>
 <instance part="D1" gate="1" x="58.42" y="172.72" rot="R90"/>
@@ -4997,6 +5027,7 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <instance part="CPU_SW" gate="G$1" x="215.9" y="93.98" smashed="yes" rot="MR180">
 <attribute name="NAME" x="215.9" y="102.87" size="1.778" layer="95" rot="MR180"/>
 </instance>
+<instance part="D4" gate="G$1" x="215.9" y="195.58" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5041,7 +5072,7 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 </segment>
 <segment>
 <pinref part="X1" gate="-2" pin="S@1"/>
-<wire x1="213.36" y1="193.04" x2="210.82" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="193.04" x2="210.82" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="193.04" x2="210.82" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
@@ -5163,10 +5194,10 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <junction x="48.26" y="180.34"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-1" pin="S@1"/>
-<wire x1="213.36" y1="195.58" x2="210.82" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="195.58" x2="210.82" y2="203.2" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+12V"/>
+<pinref part="D4" gate="G$1" pin="-"/>
+<wire x1="210.82" y1="195.58" x2="213.36" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+4" gate="1" pin="+12V"/>
@@ -5602,6 +5633,13 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <pinref part="OK1" gate="D" pin="EMIT"/>
 <pinref part="CPU_SW" gate="G$1" pin="1"/>
 <wire x1="203.2" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+12V_IN" class="0">
+<segment>
+<pinref part="D4" gate="G$1" pin="+"/>
+<pinref part="X1" gate="-1" pin="S@1"/>
+<wire x1="220.98" y1="195.58" x2="223.52" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
