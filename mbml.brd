@@ -2009,7 +2009,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="10.16" y="35.2425" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="L1" library="TinkerTech" package="RADIAL_8.5-DIA_5-SPACE" value="" x="17.145" y="34.29" smashed="yes" rot="R90">
-<attribute name="NAME" x="23.21" y="36.815" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="22.256" y="36.337" size="1.27" layer="25"/>
 <attribute name="VALUE" x="22.605" y="36.48" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="D2" library="TinkerTech" package="DO-201AD_AXIAL" value="" x="24.13" y="41.91" smashed="yes" rot="R180">
@@ -2262,7 +2262,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="58.42" y1="34.29" x2="60.96" y2="34.29" width="1.27" layer="1"/>
 <wire x1="60.96" y1="34.29" x2="64.77" y2="38.1" width="1.27" layer="1"/>
 <contactref element="D4" pad="-"/>
-<wire x1="39.37" y1="31.75" x2="35.56" y2="35.56" width="0.254" layer="16"/>
+<wire x1="39.37" y1="31.75" x2="35.56" y2="35.56" width="2.54" layer="16"/>
 <wire x1="35.56" y1="35.56" x2="35.56" y2="36.83" width="0.254" layer="16"/>
 <wire x1="35.56" y1="36.83" x2="36.83" y2="38.1" width="0.254" layer="16"/>
 <wire x1="54.744" y1="35.306" x2="51.95" y2="38.1" width="0.254" layer="16"/>
