@@ -2044,11 +2044,11 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="60.96" y="54.61" size="1.27" layer="27" rot="R90"/>
 <attribute name="NAME" x="52.832" y="53.086" size="0.6096" layer="25"/>
 </element>
-<element name="R9" library="resistor" package="0204/5" value="1.8k" x="41.91" y="25.4" smashed="yes" rot="R270">
+<element name="R9" library="resistor" package="0204/5" value="3.3k" x="41.91" y="25.4" smashed="yes" rot="R270">
 <attribute name="NAME" x="42.2656" y="29.2354" size="0.9906" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="39.5986" y="27.5336" size="0.9906" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R10" library="resistor" package="0204/5" value="470" x="45.72" y="25.4" smashed="yes" rot="R270">
+<element name="R10" library="resistor" package="0204/5" value="10k" x="45.72" y="25.4" smashed="yes" rot="R270">
 <attribute name="NAME" x="46.0756" y="29.2354" size="0.9906" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="43.4086" y="27.5336" size="0.9906" layer="27" ratio="10" rot="R270"/>
 </element>

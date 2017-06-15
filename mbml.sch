@@ -4811,8 +4811,8 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <part name="MAIN_LED" library="FVP" deviceset="CON-2" device="B2B-XH-A(LF)(SN)"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="R9" library="resistor" deviceset="R-US_" device="0204/5" value="1.8k"/>
-<part name="R10" library="resistor" deviceset="R-US_" device="0204/5" value="470"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="0204/5" value="3.3k"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="0204/5" value="10k"/>
 <part name="Q2" library="transistor-power" deviceset="PMOSFET_N" device="" value="IRLZ24LPBF"/>
 <part name="R11" library="resistor" deviceset="R-US_" device="0204/5" value="100"/>
 <part name="D3" library="diode" deviceset="1N4004" device=""/>
@@ -5303,9 +5303,9 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="96.52" x2="152.4" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="96.52" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="154.94" x2="129.54" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="154.94" x2="129.54" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="96.52" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="160.02" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="160.02" x2="129.54" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="177.8" x2="73.66" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="D9"/>
 <wire x1="76.2" y1="160.02" x2="73.66" y2="160.02" width="0.1524" layer="91"/>
