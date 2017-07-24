@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -4906,6 +4906,10 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <wire x1="269.24" y1="78.74" x2="269.24" y2="162.56" width="0.1524" layer="94"/>
 <wire x1="193.04" y1="162.56" x2="193.04" y2="213.36" width="0.1524" layer="94"/>
 <wire x1="5.08" y1="78.74" x2="269.24" y2="78.74" width="0.1524" layer="94"/>
+<text x="19.558" y="105.41" size="1.778" layer="97" rot="R180">SI-8050TFE</text>
+<text x="182.88" y="43.18" size="1.778" layer="97">NOTE: Gate / drain reversed on schematic because the pins
+on library component are backwards from the component 
+used on the board. I can't be bothered to fix this now, so it is what it is.</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="91.44" y="147.32"/>
@@ -4979,7 +4983,9 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 </instance>
 <instance part="GND10" gate="1" x="180.34" y="33.02"/>
 <instance part="GND11" gate="1" x="104.14" y="106.68"/>
-<instance part="U1" gate="G$1" x="12.7" y="119.38"/>
+<instance part="U1" gate="G$1" x="12.7" y="119.38" smashed="yes">
+<attribute name="NAME" x="7.62" y="133.35" size="1.778" layer="95"/>
+</instance>
 <instance part="L1" gate="G$1" x="30.48" y="124.46" smashed="yes">
 <attribute name="NAME" x="28.956" y="126.492" size="1.016" layer="95"/>
 <attribute name="VALUE" x="28.194" y="121.412" size="1.016" layer="95"/>
@@ -5588,22 +5594,23 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <net name="N$9" class="0">
 <segment>
 <pinref part="FAN_PWR" gate="G$1" pin="2"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="190.5" y1="60.96" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="60.96" x2="180.34" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="D3" gate="1" pin="A"/>
-<wire x1="170.18" y1="60.96" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
-<junction x="180.34" y="60.96"/>
+<wire x1="170.18" y1="60.96" x2="175.26" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="G"/>
+<wire x1="175.26" y1="60.96" x2="190.5" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="50.8" x2="175.26" y2="60.96" width="0.1524" layer="91"/>
+<junction x="175.26" y="60.96"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="Q2" gate="G$1" pin="G"/>
 <wire x1="170.18" y1="50.8" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="172.72" y1="50.8" x2="175.26" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="48.26" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<wire x1="180.34" y1="58.42" x2="172.72" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="58.42" x2="172.72" y2="50.8" width="0.1524" layer="91"/>
 <junction x="172.72" y="50.8"/>
 </segment>
 </net>
@@ -5647,4 +5654,10 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
